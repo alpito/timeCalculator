@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <h1>Saat Hesaplayici</h1>
+    <form method="POST" enctype="multipart/form-data" onsubmit="return check(event)">
+        <input type="datetime-local" name="timeValue" id="timeValue">
+        <input type="submit" value="Execute">
+        
+    </form>
+
+
+
+
+
+    <script>
+        const check = (e) => {
+            const form = new FormData(e.target);
+            const timeValue = form.get("timeValue");
+
+            // Gelecek zaman verisi alınıyor.
+            const futureDate = new Date(timeValue)
+            console.log(futureDate);
+            //////////////////////////////////////
+
+            // Şuanki zaman verisi alınıyor.
+            const dateNow = new Date()
+            ///////////////////////////////////////
+
+            const final = (futureDate - dateNow)/1000/60
+
+
+
+            alert(final) 
+            return false
+        };        
+
+    </script>
+</body>
+</html>
