@@ -5,17 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App</title>
+    <style>
+        body {
+            background-color: rgb(68, 89, 95);
+        }
+        form {
+            margin-top: 25%;
+            text-align: center;
+            
+        }
+
+        #timeValue {
+            background-color:  aliceblue;
+            border-radius: 0.2em;
+            box-sizing: border-box;
+            border: 0;
+            width: 25%;
+            height: 2.5em;
+        }
+
+        #Button {
+            background-color: #ffe6009c; /* Green */
+            border: none;
+            color: white;
+            padding: 0.5em 1em;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            border-radius: 0.8em;
+        }
+        h3 {
+            color: aliceblue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <h1>Saat Hesaplayici</h1>
     <form method="POST" enctype="multipart/form-data" onsubmit="return check(event)">
+        <h3>ADV Tarih ve Saatini giriniz: </h3>
         <input type="datetime-local" name="timeValue" id="timeValue">
-        <input type="submit" value="Execute">
-        
+        <input type="submit" value="Hesapla" id="Button">
     </form>
-
-
-
 
 
     <script>
